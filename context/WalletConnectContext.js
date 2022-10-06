@@ -214,7 +214,7 @@ export const ConnectWalletProvider = ({ children }) => {
   };
 
   const StakeNFT = async (nfts) => {
-    let tx = await stakingContract.batchStake(nfts);
+    let tx = await stakingContract.stake(nfts);
     setStaking(true);
     await tx.wait(3);
     setStaking(false);
@@ -222,7 +222,7 @@ export const ConnectWalletProvider = ({ children }) => {
   };
 
   const UnstakeNFT = async (nfts) => {
-    let tx = await stakingContract.batchStake(nfts);
+    let tx = await stakingContract.withdraw(nfts);
     setUnstaking(true);
     await tx.wait(3);
     setUnstaking(false);
