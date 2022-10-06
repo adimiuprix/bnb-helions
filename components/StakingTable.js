@@ -87,7 +87,6 @@ export default function StakingTable() {
         {walletNfts.length !== 0 ? (
           <Table
             bordered
-            hoverable
             shadow={false}
             selectionMode="multiple"
             aria-label="All Unstaked NFTs"
@@ -175,7 +174,6 @@ export default function StakingTable() {
         <div style={{ marginBottom: "20px" }}>
           <Table
             bordered
-            hoverable
             shadow={false}
             selectionMode="multiple"
             aria-label="Eall Staked Nfts"
